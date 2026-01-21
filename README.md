@@ -1,56 +1,56 @@
 # 📸 Kamera Biasa
 
-**Kamera Biasa** adalah aplikasi kamera desktop sederhana berbasis **Python**, **OpenCV**, dan **CustomTkinter**. Aplikasi ini menampilkan kamera secara real-time, mendukung pengambilan foto dengan efek flash opsional, watermark tanggal & waktu, serta notifikasi (toast) setelah foto berhasil disimpan.
+**Kamera Biasa** is a simple desktop camera application built with **Python**, **OpenCV**, and **CustomTkinter**. The app provides a real-time camera preview, photo capture with optional flash, automatic date & time watermarking, and toast notifications after a photo is saved.
 
-Project ini dibuat dengan fokus pada **UI yang clean**, **alur logic yang jelas**, dan **pengelolaan kamera yang aman** agar tidak terjadi freeze atau double trigger.
-
----
-
-## ✨ Fitur Utama
-
-* 🎥 Live preview kamera (real-time)
-* 📷 Ambil foto (capture)
-* ⚡ Mode flash (on/off)
-* 🕒 Watermark tanggal & waktu otomatis
-* 🔔 Toast notification setelah foto disimpan
-* 📁 Buka folder hasil foto langsung dari aplikasi
-* ⬅️ Navigasi Start Screen & Camera Screen
-* 🌙 Dark mode UI
+This project focuses on a **clean UI**, **clear logic separation**, and **safe camera handling** to avoid freezes, double triggers, or UI glitches.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## ✨ Features
+
+* 🎥 Real-time camera preview
+* 📷 Photo capture
+* ⚡ Flash mode (on / off)
+* 🕒 Automatic date & time watermark
+* 🔔 Toast notification after capture
+* 📁 Open capture folder directly from the app
+* ⬅️ Navigation between Start Screen and Camera Screen
+* 🌙 Dark mode user interface
+
+---
+
+## 🛠️ Tech Stack
 
 * **Python 3.x**
-* **OpenCV (cv2)** – akses kamera
-* **CustomTkinter** – modern UI untuk Tkinter
-* **Pillow (PIL)** – pengolahan gambar & watermark
+* **OpenCV (cv2)** – camera access
+* **CustomTkinter** – modern UI framework for Tkinter
+* **Pillow (PIL)** – image processing and watermarking
 
 ---
 
-## 📂 Struktur File Sederhana
+## 📂 Project Structure
 
 ```
 Kamera-Biasa/
 │
-├── main.py            # File utama aplikasi
-├── camera_captures/   # Folder hasil foto (auto-generate)
+├── main.py            # Main application file
+├── camera_captures/   # Captured photos (auto-generated)
 └── README.md
 ```
 
 ---
 
-## ▶️ Cara Menjalankan
+## ▶️ How to Run
 
-### 1️⃣ Install dependency
+### 1️⃣ Install dependencies
 
-Pastikan Python sudah terinstall, lalu jalankan:
+Make sure Python is installed, then run:
 
 ```bash
 pip install opencv-python pillow customtkinter
 ```
 
-### 2️⃣ Jalankan aplikasi
+### 2️⃣ Run the application
 
 ```bash
 python main.py
@@ -58,63 +58,63 @@ python main.py
 
 ---
 
-## 🧠 Alur Kerja Singkat
+## 🧠 Application Flow
 
 1. **Start Screen**
 
-   * Klik *Mulai Kamera*
+   * Click *Start Camera*
 
 2. **Camera Screen**
 
-   * Kamera aktif dan menampilkan preview
-   * Tombol Capture untuk mengambil foto
-   * Tombol Flash untuk mengaktifkan / menonaktifkan flash
+   * Camera starts and shows live preview
+   * Capture button to take a photo
+   * Flash button to enable / disable flash
 
-3. **Capture Foto**
+3. **Photo Capture**
 
-   * Jika flash aktif → layar menyala sesaat (1x)
-   * Foto disimpan ke folder `camera_captures`
-   * Toast muncul sebagai notifikasi
+   * If flash is enabled → screen flashes once
+   * Photo is saved to the `camera_captures` folder
+   * Toast notification appears
 
 4. **Back to Start**
 
-   * Kamera dilepas (release)
-   * Loop kamera dihentikan dengan aman
+   * Camera is safely released
+   * Camera loop is stopped properly
 
 ---
 
-## ⚠️ Catatan Teknis Penting
+## ⚠️ Technical Notes
 
-* Flash **hanya dipicu dari fungsi capture**, bukan dari toast
-* Toast **tidak memicu efek visual lain** (pure UI)
-* Loop kamera dikontrol menggunakan flag untuk mencegah freeze
-* `cv2.VideoCapture()` dijalankan dengan delay ringan agar UI tetap responsif
+* Flash is triggered **only from the capture logic**, not from the toast
+* Toast notifications are **UI-only** and do not trigger side effects
+* Camera loop is controlled using a running flag to prevent freezes
+* `cv2.VideoCapture()` is started with a small delay to keep the UI responsive
 
 ---
 
 ## 🧪 Known Limitations
 
-* Belum mendukung pemilihan device kamera
-* Tidak ada shutter sound
-* Resolusi mengikuti default kamera
+* No camera device selection
+* No shutter sound
+* Resolution depends on the default camera settings
 
 ---
 
-## 🚀 Rencana Pengembangan (Opsional)
+## 🚀 Possible Improvements
 
-* Animasi fade antar screen
-* Toast dengan efek slide / fade
-* Loader "Opening Camera..."
-* Pengaturan resolusi kamera
-* Capture menggunakan hotkey keyboard
+* Fade / slide animations between screens
+* Animated toast (fade / slide)
+* Loading indicator ("Opening Camera...")
+* Camera resolution settings
+* Keyboard shortcuts for capture
 
 ---
 
 ## 👤 Author
 
-Dikembangkan oleh **Rafie Restu Ramadhani (a.k.a rpiirmdhni)**
+Developed by **Rafie Restu Ramadhani (a.k.a rpiirmdhni)**
 2026
 
 ---
 
-> "Simpel, fungsional, dan cukup — Kamera Biasa."
+> "Simple, functional, and just enough — Kamera Biasa."
