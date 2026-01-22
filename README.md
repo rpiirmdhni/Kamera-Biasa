@@ -21,7 +21,7 @@ This project focuses on a **clean UI**, **clear logic separation**, and **safe c
 
 ## 🛠️ Tech Stack
 
-* **Python 3.x**
+* **Python 3.12.x**
 * **OpenCV (cv2)** – camera access
 * **CustomTkinter** – modern UI framework for Tkinter
 * **Pillow (PIL)** – image processing and watermarking
@@ -118,3 +118,4 @@ Developed by **Rafie Restu Ramadhani (a.k.a rpiirmdhni)**
 ---
 
 > "Simple, functional, and just enough — Kamera Biasa."
+
